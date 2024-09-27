@@ -5,7 +5,7 @@ load_dotenv()
 import os
 import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Function to get response from OpenAI
 def get_openai_response(messages):

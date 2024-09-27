@@ -7,7 +7,7 @@ import anthropic
 
 # Function to get response from Claude using the Messages API
 def get_claude_response(prompt):
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    client = anthropic.Anthropic(api_key=st.secrets["CLAUDE_API_KEY"])
     response = client.messages.create(
         model="claude-3-5-sonnet-20240620",
         messages=[{"role": "user", "content": prompt}]
